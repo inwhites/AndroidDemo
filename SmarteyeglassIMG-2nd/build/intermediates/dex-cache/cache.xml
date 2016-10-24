@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="F:\AndroidProject\IMGDisplay\SmarteyeglassIMG-2nd\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="F:\AndroidProject\IMGDisplay\SmarteyeglassIMG-2nd\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-22.2.0_817412ee9c6a694fdf3e2645e3eac1c398d3a8b1.jar" />
+    </item>
+    <item
+        jar="F:\AndroidProject\IMGDisplay\SmarteyeglassIMG-2nd\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="F:\AndroidProject\IMGDisplay\SmarteyeglassIMG-2nd\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-22.2.0_e7b23ae2cdba4865417d383630dd3b10fbc63f96.jar" />
+    </item>
+    <item
+        jar="F:\AndroidProject\IMGDisplay\SmarteyeglassIMG-2nd\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="F:\AndroidProject\IMGDisplay\SmarteyeglassIMG-2nd\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0_41fb313dda57ed1fec161966dc4e8034ac9369db.jar" />
+    </item>
+    <item
+        jar="C:\Users\inwhites\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="F:\AndroidProject\IMGDisplay\SmarteyeglassIMG-2nd\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0_490c1ec1f38662995f6ed86034a9c8cfa83f5d2e.jar" />
+    </item>
+    <item
+        jar="F:\AndroidProject\IMGDisplay\SmarteyeglassIMG-2nd\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="eb50fb75881642d34a795cbb8b43ea46b71fd117">
+        <dex dex="F:\AndroidProject\IMGDisplay\SmarteyeglassIMG-2nd\app\build\intermediates\pre-dexed\debug\instant-run_aaa7639ab2e2e4ac1ddb92c74aa09b2cd73c2c00.jar" />
+    </item>
+    <item
+        jar="F:\AndroidProject\IMGDisplay\SmarteyeglassIMG-2nd\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="1cff9d8b662530d770fda40db80c9365b2c86370">
+        <dex dex="F:\AndroidProject\IMGDisplay\SmarteyeglassIMG-2nd\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_4c03b1f44ab28b5bc918aa6c89ec00cc41d38592.jar" />
+    </item>
+
+</items>

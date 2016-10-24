@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "F:\\AndroidProject\\IMGDisplay\\SmarteyeglassIMG-2nd\\SmartExtensionUtils\\build\\intermediates\\res\\merged\\release\\values-ja\\values-ja.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 52,
+                    "endOffset": 103
+                },
+                "from": {
+                    "file": "F:\\AndroidProject\\IMGDisplay\\SmarteyeglassIMG-2nd\\SmartExtensionUtils\\res\\values-ja\\headset_pro.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 136,
+                        "endColumn": 52,
+                        "endOffset": 184
+                    }
+                }
+            }
+        ]
+    }
+]

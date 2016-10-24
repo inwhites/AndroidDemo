@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">IMGDisplay</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="configuration_text">ImageView</string>
+    <string name="extension_name">IMGDisplay</string>
+    <string name="imgviewWidth">500px</string>
+    <string name="imgviewHeight">200px</string>
+
+</resources>
