@@ -6,6 +6,7 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 /**
@@ -66,9 +67,9 @@ public class RoundProgressBar extends View {
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(strokeWidth);
 
-        //画圆
+        //draw round
         canvas.drawCircle(centerX,centerY,radius,paint);
-        //画进度
+        //draw progress
         paint.setColor(progressColor);
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(strokeWidth);
@@ -89,6 +90,10 @@ public class RoundProgressBar extends View {
         }
         Paint.FontMetrics metrics = paint.getFontMetrics();
         float baseline = (getMeasuredHeight()-metrics.bottom+metrics.top)/2-metrics.top;
+        float baseline1 = (getMeasuredHeight()+metrics.bottom-metrics.top)/2-metrics.bottom;
+        Log.d("TAG", "drawRoundProgressBar: " + baseline);
+        Log.d("TAG", "drawRoundProgressBar: " + baseline1);
+        Log.d("TAG", "drawRoundProgressBar: " + metrics.ascent+ "   "+ metrics.descent);
         canvas.drawText(text, centerX - textWidth / 2, baseline, paint);
 
 
