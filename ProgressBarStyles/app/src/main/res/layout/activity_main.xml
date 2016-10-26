@@ -5,7 +5,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="#0C0B0A"
     android:orientation="vertical"
 
   >
@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:id="@+id/roundBar"
-        android:layout_marginBottom="20dp"
+
         />
 
 
@@ -22,12 +22,22 @@
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:id="@+id/horizonBar"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
+        />
+    <android.inwhites.com.progressbarstyles.SectorProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/sectorProgress"
+
         />
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
         android:id="@+id/button"
         android:layout_below="@+id/roundBar"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        android:background="#FFF6EB"
+        android:text="开始"
         />
 </LinearLayout>

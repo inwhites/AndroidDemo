@@ -18,13 +18,19 @@ public class MainActivity extends AppCompatActivity {
 
     private RoundProgressBar mRoundProgressBar;
     private HorizontalProgressBar mHorizontalProgressBar;
+    private SectorProgressBar mSectorProgressBar;
     Button mButton = null;
+    boolean start = false;
+    private int progress = 0;
 
     Handler mHandler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
             mRoundProgressBar.setProgress( msg.arg1);
             mHorizontalProgressBar.setProgress(msg.arg1);
+            mSectorProgressBar.setProgress(msg.arg1);
+            if(msg.arg1 == 100)
+                mButton.setText("开始");
 
         }
     };
@@ -35,12 +41,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mRoundProgressBar = (RoundProgressBar) findViewById(R.id.roundBar);
         mHorizontalProgressBar = (HorizontalProgressBar) findViewById(R.id.horizonBar);
+        mSectorProgressBar = (SectorProgressBar) findViewById(R.id.sectorProgress);
         mButton = (Button) findViewById(R.id.button);
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d("TAG", "onClick: " +"****");
+                if (progress >=100){
+                    start = false;
+                    progress = 0;
+                }
+                start = !start;
+                mButton.setText(start?"暂停":"开始");
+
                 setRoundProgressBar();
+
             }
         });
 
@@ -52,10 +67,11 @@ public class MainActivity extends AppCompatActivity {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                int progress = 0;
+
                 while (true){
-                    if(progress == 100)
-                        break;
+                    if(progress >= 100){
+
+                        break;}
                     Message message = mHandler.obtainMessage();
 
                     try {
@@ -64,10 +80,15 @@ public class MainActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
 
+                    if(start){
                     progress+=1;
                     Log.d("TAG", "run: " + progress);
                     message.arg1 = progress;
                     message.sendToTarget();
+
+                    }
+                    else
+                        break;
                 }
             }
         }).start();

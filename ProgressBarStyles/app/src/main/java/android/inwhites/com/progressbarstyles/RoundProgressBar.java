@@ -136,4 +136,8 @@ public class RoundProgressBar extends View {
     public void setStrokeWidth(int strokeWidth) {
         this.strokeWidth = strokeWidth;
     }
+
+
+
+
 }
