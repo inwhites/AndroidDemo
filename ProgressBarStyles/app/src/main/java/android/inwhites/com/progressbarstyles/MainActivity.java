@@ -17,12 +17,14 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private RoundProgressBar mRoundProgressBar;
+    private HorizontalProgressBar mHorizontalProgressBar;
     Button mButton = null;
 
     Handler mHandler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
             mRoundProgressBar.setProgress( msg.arg1);
+            mHorizontalProgressBar.setProgress(msg.arg1);
 
         }
     };
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mRoundProgressBar = (RoundProgressBar) findViewById(R.id.roundBar);
+        mHorizontalProgressBar = (HorizontalProgressBar) findViewById(R.id.horizonBar);
         mButton = (Button) findViewById(R.id.button);
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override

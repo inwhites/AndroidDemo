@@ -18,8 +18,8 @@ public class RoundProgressBar extends View {
     private int centerX ;
     private int centerY ;
     private int radius  = 20;
-    private int strokeWidth = 10;
-    private int roundColor = 0xFF232930;
+    private int strokeWidth = 30;
+    private int roundColor = 0xFFC7A07B;
     private int progressColor = 0xFF26FF5E;
     private int fontColor = 0xFF3E9BF3;
     private int fontSize = 10;
@@ -27,37 +27,35 @@ public class RoundProgressBar extends View {
     private Paint mPaint;
 
     public RoundProgressBar(Context context) {
-        super(context);
+        this(context,null);
 
 
     }
 
     public RoundProgressBar(Context context, AttributeSet attrs) {
-        super(context, attrs);
+        this(context, attrs,0);
+
+
     }
 
     public RoundProgressBar(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-    }
-
-    public RoundProgressBar(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
+
     }
+
+
 
     @Override
     protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
 
         centerX = getWidth()/2;
         centerY = getHeight()/2;
-        radius  = centerX > centerY ? centerX/2:centerY/2;
-        strokeWidth = radius / 7;
-        fontSize = strokeWidth+10;
 
-        if (mPaint == null)
-            mPaint = new Paint(Paint.ANTI_ALIAS_FLAG) ;
+
+        fontSize = strokeWidth+10;
+        radius  = centerX < centerY ? centerX-strokeWidth:centerY - strokeWidth;
         drawRoundProgressBar(canvas,mPaint);
     }
 
@@ -85,9 +83,7 @@ public class RoundProgressBar extends View {
         paint.getTextBounds(text,0,text.length(),rect);
         float textWidth = rect.width();
         float textHeight = rect.height();
-        if (textWidth >= radius * 2) {
-            textWidth = radius * 2;
-        }
+
         Paint.FontMetrics metrics = paint.getFontMetrics();
         float baseline = (getMeasuredHeight()-metrics.bottom+metrics.top)/2-metrics.top;
         float baseline1 = (getMeasuredHeight()+metrics.bottom-metrics.top)/2-metrics.bottom;
